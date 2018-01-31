@@ -117,6 +117,19 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 */
 
 //Code Here
+function divider(numbers) {
+  var evens = [];
+  var odds = [];
+
+  for (var i=0; i < numbers.length; i++) {
+    if (numbers[i] % 2 === 0) {
+      evens.push(numbers[i]);
+    } else {
+      odds.push(numbers[i]);
+    }
+  }
+  return [evens, odds];
+}
 
 
 
@@ -138,6 +151,10 @@ var getRandomArbitrary = function() {
 */
 
 //Code Here
+function finder(arr) {
+  num = getRandomArbitrary();
+  return arr.includes(num);
+}
 
 
 
@@ -165,6 +182,19 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
 //Code Here
+function removeItem(list, item) {
+  if (list.indexOf(item) !== -1) {
+    var idx = list.indexOf(item);
+    list.splice(idx, 1);
+  }
+  return list;
+}
+
+function addItem(list, item) {
+  list.push(item);
+
+  return list;
+}
 
 
 
@@ -175,7 +205,13 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
 //Code Here
-
+function maker() {
+  newArray = [];
+  for (var i=1; i <= 215; i++) {
+    newArray.push(i);
+  } 
+  return newArray;
+}
 
 
 ////////// PROBLEM 10 //////////
@@ -191,6 +227,13 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 */
   
 //Code Here
+function addTen(numbers) {
+  var newArray = [];
+  for (var i=0; i < numbers.length; i++) {
+    newArray.push(parseInt(numbers[i]) + 10);
+  }
+  return newArray;
+}
 
 
 
@@ -216,7 +259,9 @@ for(var i = 0; i < num2; i++){
 */
 
 //Code Here
-
+function longer(arr1, arr2) {
+  return arr1.length > arr2.length ? arr1 : arr2;
+}
 
 
 /*
@@ -228,6 +273,16 @@ for(var i = 0; i < num2; i++){
 */
 
 //Code Here
+
+function both(arr1, arr2) {
+  var newArr = [];
+  for (var i=0; i < arr1.length; i++) {
+    if (arr2.includes(arr1[i])) {
+      newArr.push(arr1[i])
+    }
+  }
+  return newArr;
+}
 
 
 
@@ -268,8 +323,8 @@ var colt = {
 */
 
 //Code Here
-
-
+devMountainEmployees.push(tyler, cahlan, ryan, colt);
+console.log('length ' + devMountainEmployees.length);
 
 /*
   Now let's say Cahlan has a mental breakdown and has to take a leave of absence to 'find himself'.
@@ -277,6 +332,14 @@ var colt = {
 */
 
 //Code Here
+
+devMountainEmployees = devMountainEmployees.filter(function(val) {
+    return val.name !== 'Cahlan';
+})
+
+
+
+
 
 
 
@@ -289,7 +352,7 @@ var colt = {
 */
 
 //Code Here
-
+var users = [];
 
 
 /*
@@ -308,7 +371,21 @@ var user1 = {
 // Do not edit the code above.
 
 //Code Here
+var user2 = {
+  name: 'Tav hafner',
+  email: 'tav_hafner@gmail.com',
+  password: 'bushdid911',
+  username: 'thafner'
+};
 
+var user3 = {
+  name: 'Rick Astley',
+  email: 'rickastley@gmail.com',
+  password: 'nevergonna',
+  username: 'rastley'
+};
+
+users.push(user1, user2, user3);
 
 
 /*
@@ -322,6 +399,7 @@ var user1 = {
 */
 
 //Code Here
+users = users.filter((val) => val.email !== 'tylermcginnis33@gmail.com');
 
 
 
